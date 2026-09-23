@@ -1,0 +1,152 @@
+:root {
+  color-scheme: light dark;
+  --bg: #0b0d10;
+  --card: #15181d;
+  --text: #e8eaed;
+  --muted: #9aa3ad;
+  --accent: #4f9dff;
+  --ok: #3ecf8e;
+  --bad: #ff6b6b;
+  --border: #262b31;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px 16px 48px;
+}
+
+header {
+  padding: 24px 0 8px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 4px 0 0;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 12px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #0e1013;
+  color: var(--text);
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #06121f;
+  cursor: pointer;
+}
+
+button:active {
+  opacity: 0.85;
+}
+
+.results.hidden {
+  display: none;
+}
+
+.flag {
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.flag-ok {
+  color: var(--ok);
+}
+
+.flag-bad {
+  color: var(--bad);
+}
+
+.bill {
+  margin-top: 12px;
+}
+
+.bill h3 {
+  font-size: 14px;
+  margin: 0 0 6px;
+  color: var(--muted);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+td {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+td:last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.total td {
+  border-bottom: none;
+  font-weight: 700;
+  padding-top: 8px;
+}
+
+footer {
+  margin-top: 32px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}
