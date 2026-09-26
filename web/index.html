@@ -14,34 +14,33 @@
       </header>
 
       <section class="card">
-        <h2>1. This week's orders</h2>
-        <p class="hint">Two households in the same zone, ordering tomatoes from the same market.</p>
-        <label>
-          Household A — tomato (kg)
-          <input id="qtyA" type="number" min="0" step="0.5" value="4" inputmode="decimal" />
-        </label>
-        <label>
-          Household B — tomato (kg)
-          <input id="qtyB" type="number" min="0" step="0.5" value="6" inputmode="decimal" />
-        </label>
+        <h2>1. Household A — order</h2>
+        <p class="hint">Pick fruits and vegetables for this household.</p>
+        <div id="pickerA" class="picker" data-household="A"></div>
       </section>
 
       <section class="card">
-        <h2>2. Live price feed</h2>
-        <p class="hint">Today's wholesale unit price at this market (stub feed).</p>
-        <label>
-          Price per kg ($)
-          <input id="feedPrice" type="number" min="0" step="0.01" value="2.00" inputmode="decimal" />
-        </label>
+        <h2>1. Household B — order</h2>
+        <p class="hint">Pick fruits and vegetables for this household.</p>
+        <div id="pickerB" class="picker" data-household="B"></div>
       </section>
 
       <section class="card">
-        <h2>3. Runner's receipt</h2>
-        <p class="hint">What the runner actually submits after buying the aggregated list.</p>
-        <label>
-          Receipt total ($)
-          <input id="receiptTotal" type="number" min="0" step="0.01" value="20.50" inputmode="decimal" />
-        </label>
+        <h2>2. Runner's shopping list</h2>
+        <p class="hint">Combined basket across both households, merged by item.</p>
+        <div id="aggregatedList"></div>
+      </section>
+
+      <section class="card">
+        <h2>3. Live price feed</h2>
+        <p class="hint">Today's wholesale unit price at this market (stub feed, editable).</p>
+        <div id="priceFeedList"></div>
+      </section>
+
+      <section class="card">
+        <h2>4. Runner's receipt</h2>
+        <p class="hint">What the runner actually paid for each item. Edit to test overcharging.</p>
+        <div id="receiptList"></div>
         <label>
           Runner flat fee ($)
           <input id="runnerFee" type="number" min="0" step="0.5" value="15" inputmode="decimal" />
