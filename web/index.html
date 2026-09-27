@@ -3,58 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Wsell — live demo</title>
+    <title>Wsell — this week</title>
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
     <main class="app">
-      <header>
+      <header class="app-header">
         <h1>Wsell</h1>
-        <p class="subtitle">Wholesale marketplace pipeline — interactive demo</p>
       </header>
 
-      <section class="card">
-        <h2>1. Household A — order</h2>
-        <p class="hint">Pick fruits and vegetables for this household.</p>
-        <div id="pickerA" class="picker" data-household="A"></div>
-      </section>
-
-      <section class="card">
-        <h2>1. Household B — order</h2>
-        <p class="hint">Pick fruits and vegetables for this household.</p>
-        <div id="pickerB" class="picker" data-household="B"></div>
-      </section>
-
-      <section class="card">
-        <h2>2. Runner's shopping list</h2>
-        <p class="hint">Combined basket across both households, merged by item.</p>
-        <div id="aggregatedList"></div>
-      </section>
-
-      <section class="card">
-        <h2>3. Live price feed</h2>
-        <p class="hint">Today's wholesale unit price at this market (stub feed, editable).</p>
-        <div id="priceFeedList"></div>
-      </section>
-
-      <section class="card">
-        <h2>4. Runner's receipt</h2>
-        <p class="hint">What the runner actually paid for each item. Edit to test overcharging.</p>
-        <div id="receiptList"></div>
-        <label>
-          Runner flat fee ($)
-          <input id="runnerFee" type="number" min="0" step="0.5" value="15" inputmode="decimal" />
-        </label>
-        <button id="runBtn">Run this week's cycle</button>
-      </section>
-
-      <section id="results" class="card results hidden">
-        <h2>Result</h2>
-        <div id="resultsBody"></div>
-      </section>
+      <section id="screen-home" class="screen"></section>
+      <section id="screen-bill" class="screen hidden"></section>
+      <section id="screen-history" class="screen hidden"></section>
 
       <footer>
-        <p>Client-side only — no server, no data leaves this device.</p>
+        <p>Client-side demo, no data leaves this device.</p>
       </footer>
     </main>
     <script type="module" src="./src/main.js"></script>
